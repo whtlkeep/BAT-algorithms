@@ -4,7 +4,7 @@ class Solution(object):
         lenn = len(arr)
         longest = [1 for i in range(lenn)]
         for i in range(1,lenn):
-            for j in range(0,i):
+            for j in range(0, i):
                 if arr[j] <= arr[i]:
                     longest[i] = max(longest[i],longest[j]+1)
         return max(longest)
