@@ -54,8 +54,6 @@ def lengthofLCS(nums1, nums2):
                 i -= 1
     return dp[len1][len2],sub[::-1]
 
-
-
 nums1 = ['a','b','c','b','d','a','b']
 nums2 = ['b','d','c','a','b','a']
 print(lengthofLCS(nums1,nums2))
