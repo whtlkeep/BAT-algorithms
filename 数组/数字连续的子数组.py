@@ -22,7 +22,7 @@ def max_sequence_len(array):
 
 def max_sequence(array):
     size = len(array)
-    dp = [1] * size  # dp[i]全部初始化为0
+    dp = [1] * size  # dp[i]全部初始化为1
     m = 1  # 记录最大的长度
     index = 0
     for i in range(1,size):
