@@ -46,6 +46,7 @@ def Permutation(array, start=0):
         * 翻转：翻转string[i+1:n]
 
 """
+
 def GetNextPermutation(array):
     size = len(array)
     # 后找
