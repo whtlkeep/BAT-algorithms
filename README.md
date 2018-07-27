@@ -3,4 +3,4 @@
 
 数据结构资源链接：https://pan.baidu.com/s/1PNOUUGm4sYCRmasttrm8SA 密码：f8l7
 
-本项目主要来源： 小象学院数据结构视频和牛客网真题，个人用Python语言实现。
+本项目主要来源： 小象学院数据结构视频和牛客网真题，本人用Python实现。
