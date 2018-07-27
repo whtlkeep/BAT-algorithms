@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5876083d-d555-4e6d-8d37-6995bc903ac5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/数组/排序.py" afterPath="$PROJECT_DIR$/数组/排序.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/查找排序/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/查找排序/归并排序.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/数组/折半查找.py" afterPath="$PROJECT_DIR$/查找排序/折半查找.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/数组/排序.py" afterPath="$PROJECT_DIR$/查找排序/排序.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,20 +17,10 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BAT_algorithms$LIS_.coverage" NAME="LIS-最长递增子序列 Coverage Results" MODIFIED="1532663103167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/字符串" />
-    <SUITE FILE_PATH="coverage/BAT_algorithms$.coverage" NAME="排序 Coverage Results" MODIFIED="1532676182676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数组" />
+    <SUITE FILE_PATH="coverage/BAT_algorithms$.coverage" NAME="归并排序 Coverage Results" MODIFIED="1532679618829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/查找排序" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LCS-最长公共子序列.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/字符串/LCS-最长公共子序列.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="1.操作最少次数.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/动态规划/1.操作最少次数.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,13 +50,6 @@
       </file>
       <file leaf-file-name="2.任务安排_题目.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/动态规划/2.任务安排_题目.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.操作最少次数_思路.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动态规划/1.操作最少次数_思路.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -98,11 +85,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="排序.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/数组/排序.py">
+      <file leaf-file-name="排序.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/查找排序/排序.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="142" column="3" lean-forward="false" selection-start-line="142" selection-start-column="3" selection-end-line="144" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="折半查找.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/查找排序/折半查找.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="归并排序.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/查找排序/归并排序.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -137,6 +144,8 @@
         <option value="$PROJECT_DIR$/字符串/全排列.py" />
         <option value="$PROJECT_DIR$/树/树的遍历.py" />
         <option value="$PROJECT_DIR$/数组/排序.py" />
+        <option value="$PROJECT_DIR$/查找排序/排序.py" />
+        <option value="$PROJECT_DIR$/查找排序/归并排序.py" />
       </list>
     </option>
   </component>
@@ -146,8 +155,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="684" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
@@ -181,7 +190,7 @@
             <path>
               <item name="BAT-algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="BAT-algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="数组" type="462c0819:PsiDirectoryNode" />
+              <item name="查找排序" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,6 +205,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git\BAT-algorithms\查找排序" />
       <recent name="D:\git\BAT-algorithms\字符串" />
     </key>
   </component>
@@ -211,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.排序">
+  <component name="RunManager" selected="Python.归并排序">
     <configuration name="最长公共子序列" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,25 +307,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BAT-algorithms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/数组/排序.py" />
+      <option name="SCRIPT_NAME" value="D:\git\BAT-algorithms\查找排序\排序.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="循环左移" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="归并排序" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/字符串" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/查找排序" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BAT-algorithms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/字符串/循环左移.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/查找排序/归并排序.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -339,19 +349,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.循环左移" />
-      <item index="1" class="java.lang.String" itemvalue="Python.最长公共子序列" />
-      <item index="2" class="java.lang.String" itemvalue="Python.LIS-最长递增子序列" />
-      <item index="3" class="java.lang.String" itemvalue="Python.最长回文子串" />
-      <item index="4" class="java.lang.String" itemvalue="Python.排序" />
+      <item index="0" class="java.lang.String" itemvalue="Python.最长公共子序列" />
+      <item index="1" class="java.lang.String" itemvalue="Python.LIS-最长递增子序列" />
+      <item index="2" class="java.lang.String" itemvalue="Python.最长回文子串" />
+      <item index="3" class="java.lang.String" itemvalue="Python.排序" />
+      <item index="4" class="java.lang.String" itemvalue="Python.归并排序" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.排序" />
-        <item index="1" class="java.lang.String" itemvalue="Python.最长回文子串" />
-        <item index="2" class="java.lang.String" itemvalue="Python.LIS-最长递增子序列" />
-        <item index="3" class="java.lang.String" itemvalue="Python.最长公共子序列" />
-        <item index="4" class="java.lang.String" itemvalue="Python.循环左移" />
+        <item index="0" class="java.lang.String" itemvalue="Python.归并排序" />
+        <item index="1" class="java.lang.String" itemvalue="Python.排序" />
+        <item index="2" class="java.lang.String" itemvalue="Python.最长回文子串" />
+        <item index="3" class="java.lang.String" itemvalue="Python.LIS-最长递增子序列" />
+        <item index="4" class="java.lang.String" itemvalue="Python.最长公共子序列" />
       </list>
     </recent_temporary>
   </component>
@@ -369,14 +379,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21889055" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29810727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13268608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -617,10 +627,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/数组/排序.py">
+    <entry file="file://$PROJECT_DIR$/查找排序/折半查找.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/查找排序/排序.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="142" column="3" lean-forward="false" selection-start-line="142" selection-start-column="3" selection-end-line="144" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/查找排序/归并排序.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>
