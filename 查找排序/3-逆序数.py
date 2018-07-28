@@ -4,6 +4,7 @@
     则认为array[i],array[j]是逆序对。一个数组中包含的逆序对的数目称为该数组的逆序数。设计一个算法求一个数组的逆序数
 二、利用 归并排序 的思想
     在归并排序中，会将两个升序的数组进行合并，利用升序数组的特性，可以快速求得逆序数
+    见 图解
 """
 
 temp = [0] * 100
@@ -20,6 +21,7 @@ def Merge(array, low, mid, high):
             temp[size] = array[i]
             i += 1
         else:
+            # 除了以下三行代码，其余代码与归并排序一模一样
             count[0] += (mid - i + 1)
             for h in range(i, mid + 1):
                 pairs.append((array[h], array[j]))
