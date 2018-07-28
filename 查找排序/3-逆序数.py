@@ -7,9 +7,11 @@
 """
 
 temp = [0] * 100
+count = [0]
+pairs = []
 
 
-def Merge(array, low, mid, high, count):
+def Merge(array, low, mid, high):
     i = low
     j = mid + 1
     size = 0
@@ -18,7 +20,9 @@ def Merge(array, low, mid, high, count):
             temp[size] = array[i]
             i += 1
         else:
-            count += (mid - i + 1)
+            count[0] += (mid - i + 1)
+            for h in range(i, mid + 1):
+                pairs.append((array[h], array[j]))
             temp[size] = array[j]
             j += 1
         size += 1
@@ -34,17 +38,17 @@ def Merge(array, low, mid, high, count):
         array[low + i] = temp[i]
 
 
-def Merge_sort(array, low, high, count):
+def Merge_sort(array, low, high):
     if low >= high:
         return
     mid = (low + high) >> 1
-    Merge_sort(array, low, mid, count)
-    Merge_sort(array, mid + 1, high, count)
-    Merge(array, low, mid, high, count)
+    Merge_sort(array, low, mid)
+    Merge_sort(array, mid + 1, high)
+    Merge(array, low, mid, high)
 
 
 if __name__ == '__main__':
-    count = 0
     array = [3, 56, 2, 7, 45, 8, 1]
-    Merge_sort(array, 0, len(array) - 1, count)
-    print(count)
+    Merge_sort(array, 0, len(array) - 1)
+    print(count[0])
+    print(pairs)
