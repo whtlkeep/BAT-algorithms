@@ -11,8 +11,8 @@ def in_order_traversal(root):  # 中序
     if root == None:
         return res
     cur = root
-    while len(stack)!=0 or cur != None:
-        while cur!=None:
+    while len(stack) != 0 or cur != None:
+        while cur != None:
             stack.append(cur)
             cur = cur.left
         node = stack.pop()
@@ -25,7 +25,7 @@ def pre_order_traversal(root):  # 前序
     result = []
     stack = []
     stack.append(root)
-    while len(stack)!=0:
+    while len(stack) != 0:
         node = stack.pop()
         if node == None:
             continue
@@ -43,7 +43,7 @@ def post_order_traversal(root):  # 后序
     result = []
     stack = []
     stack.append(root)
-    while len(stack)!=0:
+    while len(stack) != 0:
         node = stack.pop()
         if node == None:
             continue

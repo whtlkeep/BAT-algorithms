@@ -30,12 +30,14 @@ def adjust_heap(lists, i, size):
             lists[max], lists[i] = lists[i], lists[max]
             adjust_heap(lists, max, size)
 
-#  创建堆
+
+# 创建堆
 def build_heap(lists, size):
     for i in range(0, (size >> 1))[::-1]:
         adjust_heap(lists, i, size)
 
-#  堆排序
+
+# 堆排序
 def heap_sort(lists):
     size = len(lists)
     build_heap(lists, size)
@@ -43,6 +45,7 @@ def heap_sort(lists):
         lists[0], lists[i] = lists[i], lists[0]
         adjust_heap(lists, 0, i)
     return lists
+
 
 if __name__ == '__main__':
     alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]

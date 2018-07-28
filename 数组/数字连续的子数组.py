@@ -13,9 +13,9 @@ def max_sequence_len(array):
     size = len(array)
     dp = [1] * size
     m = 1  # 记录最大的长度
-    for i in range(1,size):
-        if array[i]-array[i-1] == 1:
-            dp[i] += dp[i-1]
+    for i in range(1, size):
+        if array[i] - array[i - 1] == 1:
+            dp[i] += dp[i - 1]
             m = max(dp[i], m)
     return m
 
@@ -25,13 +25,14 @@ def max_sequence(array):
     dp = [1] * size  # dp[i]全部初始化为1
     m = 1  # 记录最大的长度
     index = 0
-    for i in range(1,size):
-        if array[i]-array[i-1] == 1:
-            dp[i] += dp[i-1]
+    for i in range(1, size):
+        if array[i] - array[i - 1] == 1:
+            dp[i] += dp[i - 1]
             m = max(dp[i], m)
             if m == dp[i]:
                 index = i
-    return m, array[index-m+1:index+1]
+    return m, array[index - m + 1:index + 1]
+
 
 if __name__ == '__main__':
     array = [1, 2, 3, 54, 55, 56, 57, 58, 59, 60, 99, 121]

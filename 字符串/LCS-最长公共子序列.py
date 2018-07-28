@@ -25,35 +25,37 @@
 https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3.md#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
 """
 
+
 def lengthofLCS(nums1, nums2):
     dp = []
-    len1,len2 = len(nums1), len(nums2)
-    for i in range(len1+1):
+    len1, len2 = len(nums1), len(nums2)
+    for i in range(len1 + 1):
         row = []
-        for j in range(len2+1):
+        for j in range(len2 + 1):
             row.append(0)
         dp.append(row)
-    for i in range(1, len1+1):
-        for j in range(1, len2+1):
-            if nums1[i-1] == nums2[j-1]:
-                dp[i][j] = dp[i-1][j-1] + 1
+    for i in range(1, len1 + 1):
+        for j in range(1, len2 + 1):
+            if nums1[i - 1] == nums2[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
             else:
-                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
     i = len1
     j = len2
     sub = []
-    while i!=0 and j!=0:
-        if nums1[i-1] == nums2[j-1]:
-            sub.append(nums1[i-1])
+    while i != 0 and j != 0:
+        if nums1[i - 1] == nums2[j - 1]:
+            sub.append(nums1[i - 1])
             i -= 1
             j -= 1
         else:
-            if dp[i][j-1] > dp[i-1][j]:
+            if dp[i][j - 1] > dp[i - 1][j]:
                 j -= 1
             else:
                 i -= 1
-    return dp[len1][len2],sub[::-1]
+    return dp[len1][len2], sub[::-1]
 
-nums1 = ['a','b','c','b','d','a','b']
-nums2 = ['b','d','c','a','b','a']
-print(lengthofLCS(nums1,nums2))
+
+nums1 = ['a', 'b', 'c', 'b', 'd', 'a', 'b']
+nums2 = ['b', 'd', 'c', 'a', 'b', 'a']
+print(lengthofLCS(nums1, nums2))

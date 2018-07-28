@@ -5,10 +5,12 @@
     * "abcd"[::-1] = "dcba"
 """
 
-def left_roatet_str(str1, m ):
+
+def left_roatet_str(str1, m):
     size = len(str1)
     return ((str1[0:m])[::-1] + (str1[m:])[::-1])[::-1]
 
+
 if __name__ == '__main__':
     str1 = "abcdef"
-    print(left_roatet_str(str1,2))
+    print(left_roatet_str(str1, 2))

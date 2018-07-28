@@ -11,27 +11,30 @@
     去移动元素的排序方法中，选择排序属于非常好的一种。
 """
 
+
 def selection_sort1(alist):
     # 思路是将最小值逐一选择到前面
     n = len(alist)
-    for i in range(n-1):
-        min_index = i # 记录最小值的位置
-        for j in range(i+1,n):
-            if alist[j]<alist[min_index]:
+    for i in range(n - 1):
+        min_index = i  # 记录最小值的位置
+        for j in range(i + 1, n):
+            if alist[j] < alist[min_index]:
                 min_index = j
         if min_index != i:
-            alist[i],alist[min_index] = alist[min_index],alist[i]
+            alist[i], alist[min_index] = alist[min_index], alist[i]
+
 
 def selection_sort2(alist):
     # 思路是将最大值逐一选择到后面
     n = len(alist)
-    for i in range(n-1,0,-1):
-        max_index = i # 记录最大值的位置
+    for i in range(n - 1, 0, -1):
+        max_index = i  # 记录最大值的位置
         for j in range(i):
             if alist[j] > alist[max_index]:
                 max_index = j
         if max_index != i:
-            alist[i],alist[max_index] = alist[max_index],alist[i]
+            alist[i], alist[max_index] = alist[max_index], alist[i]
+
 
 if __name__ == '__main__':
     alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]

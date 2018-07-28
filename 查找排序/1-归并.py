@@ -15,6 +15,8 @@
     * 归并过程中，可以用记录数组下标的方式代替申请新内存空间；从而避免array和
       辅助数组间的频繁数据移动
 """
+
+
 def merge(left, right):  # 合并两个有序数组
     l, r = 0, 0
     result = []
@@ -29,6 +31,7 @@ def merge(left, right):  # 合并两个有序数组
     result += right[r:]
     return result
 
+
 def merge_sort(alist):
     if len(alist) <= 1:
         return alist
@@ -37,7 +40,46 @@ def merge_sort(alist):
     right = merge_sort(alist[num:])
     return merge(left, right)
 
+
+# ------------------- 按第二个改进的修改----------------------------
+
+temp = [0] * 100
+
+
+def Merge(array, low, mid, high):
+    i = low
+    j = mid + 1
+    size = 0
+    while i <= mid and j <= high:
+        if array[i] < array[j]:
+            temp[size] = array[i]
+            i += 1
+        else:
+            temp[size] = array[j]
+            j += 1
+        size += 1
+    while i <= mid:
+        temp[size] = array[i]
+        size += 1
+        i += 1
+    while j <= high:
+        temp[size] = array[j]
+        size += 1
+        j += 1
+    for i in range(size):
+        array[low + i] = temp[i]
+
+
+def Merge_sort(array, low, high):
+    if low >= high:
+        return
+    mid = (low + high) >> 1
+    Merge_sort(array, low, mid)
+    Merge_sort(array, mid + 1, high)
+    Merge(array, low, mid, high)
+
+
 if __name__ == '__main__':
     alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    result = merge_sort(alist)
-    print(result)
+    Merge_sort(alist, 0, len(alist) - 1)
+    print(alist)

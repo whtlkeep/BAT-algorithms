@@ -28,4 +28,3 @@
 #                 dp[i][j] = max(dp[i-1][j], dp[i-1][j-w] + v)
 #             else:
 #                 dp[i][j] = dp[i-1][j]
-if "199901"<"900000":

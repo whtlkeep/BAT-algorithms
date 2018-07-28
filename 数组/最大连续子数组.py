@@ -6,6 +6,7 @@
 dp[i]为以array[i]结尾的数组中和最大的子数组
 """
 
+
 # 求得最大值
 def max_sub_array_sum(array):
     if array == None:
@@ -22,6 +23,7 @@ def max_sub_array_sum(array):
             sum_ = a
         result = max(sum_, result)
     return result
+
 
 # 求得最大连续子数组本身
 def max_sub_array(array):
@@ -43,8 +45,9 @@ def max_sub_array(array):
             result = sum_
             start = startNew
             end = i + 1
-    return array[start:end+1], result
+    return array[start:end + 1], result
+
 
 if __name__ == '__main__':
-    array = [1, -2, 3, 10, -4, 7, 2, -5,6]
+    array = [1, -2, 3, 10, -4, 7, 2, -5, 6]
     print(max_sub_array(array))

@@ -14,6 +14,7 @@
             * if string[i] != string[j], then 不是回文
 """
 
+
 def longestPalindrome(string):
     size = len(string)
     dp = []
@@ -43,6 +44,7 @@ def longestPalindrome(string):
                 max_seq_len = j - i + 1
                 max_seq = string[i:j + 1]
     return max_seq
+
 
 if __name__ == '__main__':
     string = "yyyyabcdcbawe"

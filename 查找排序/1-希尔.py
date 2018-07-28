@@ -8,6 +8,8 @@
     将待排序列划分为若干组，在每一组内进行插入排序，以使整个序列基本有序，然后再对整个序列进行插入排。
 
 """
+
+
 def shell_sort(alist):
     size = len(alist)
     gap = size >> 1
@@ -18,6 +20,7 @@ def shell_sort(alist):
                 alist[j - gap], alist[j] = alist[j], alist[j - gap]
                 j -= gap
         gap = gap >> 1
+
 
 if __name__ == '__main__':
     alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]

@@ -14,7 +14,6 @@
 
 
 def two_sum1(array, s):
-
     def quick_sort(alist, start, end):  # 快速排序
         if start >= end:
             return
@@ -49,6 +48,7 @@ def two_sum1(array, s):
             end -= 1
     return result
 
+
 def two_sum2(array, s):
     hashh = dict()
     for a in array:
@@ -56,9 +56,10 @@ def two_sum2(array, s):
     result = []
     for a in array:
         if s - a in hashh and s - a != a:
-            result.append([a, s-a])
+            result.append([a, s - a])
             del hashh[a]
     return result
+
 
 if __name__ == '__main__':
     array = [0, 3, 7, 9, 10, 11, 14, 16, 17]

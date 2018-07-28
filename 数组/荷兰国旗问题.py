@@ -19,6 +19,8 @@
         * if begin == cur, then begin++, cur++
         * if begin != cur, then swap(cur,begin), begin++,cur++
 """
+
+
 def hollandr(array):
     size = len(array)
     begin = 0
@@ -37,13 +39,7 @@ def hollandr(array):
             cur += 1
 
 
-
-
-
-
 if __name__ == '__main__':
-    array = [1,2,0,0,0,1,0,2,0,1,0,1,1,1,1,0,1]
+    array = [1, 2, 0, 0, 0, 1, 0, 2, 0, 1, 0, 1, 1, 1, 1, 0, 1]
     hollandr(array)
     print(array)
-
-

@@ -16,6 +16,7 @@
     3、若，Array[mid]<Array[end], 说明子数组Array[mid+1,mid+2,...,end]是普通升序， 更新 end = mid
 """
 
+
 def findmin(array):
     size = len(array)
     low = 0
@@ -30,5 +31,5 @@ def findmin(array):
 
 
 if __name__ == '__main__':
-    array = [4,5,6,7,0,1,2]
+    array = [4, 5, 6, 7, 0, 1, 2]
     print(findmin(array))
