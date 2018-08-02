@@ -27,6 +27,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 # 中序遍历 非递归实现
 def inorderTraversal(root, nums):
     stack = []
@@ -40,6 +41,7 @@ def inorderTraversal(root, nums):
         node = stack.pop()
         nums.append(node.val)
         cur = node.right
+
 
 def findTarget(root, k):
     """
@@ -59,4 +61,3 @@ def findTarget(root, k):
         else:
             end -= 1
     return False
-
