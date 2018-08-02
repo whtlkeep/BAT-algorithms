@@ -23,7 +23,7 @@ class TreeNode(object):
 def toBST(nums, start, end):
     if start > end:
         return None
-    middle = (start + end) / 2
+    middle = (start + end) >> 1
     root = TreeNode(nums[middle])
     root.left = toBST(nums, start, middle - 1)
     root.right = toBST(nums, middle + 1, end)
