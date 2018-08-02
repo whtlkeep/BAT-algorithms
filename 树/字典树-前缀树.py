@@ -8,14 +8,13 @@
 """
 
 
-
 class Node():
     def __init__(self):
         self.childs = [None] * 26
         self.isLeaf = False
 
-class Trie(object):
 
+class Trie(object):
     def __init__(self):
         """
         Initialize your data structure here.
@@ -72,3 +71,13 @@ class Trie(object):
             return True
         index = ord(prefix[0]) - ord('a')
         return self.startsWithhelper(prefix[1:], node.childs[index])
+
+
+if __name__ == '__main__':
+    trie = Trie()
+    trie.insert("apple")
+    print(trie.search("apple"))
+    print(trie.search("app"))
+    print(trie.startsWith("app"))
+    trie.insert("app")
+    print(trie.search("app"))
