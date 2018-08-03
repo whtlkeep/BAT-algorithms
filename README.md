@@ -2,7 +2,7 @@
 用Python语言实现数据结构中各类经典的算法，面试笔试宝典
 
 # 目录结构  
-* 树  
+* [树](https://github.com/whtlkeep/BAT-algorithms/tree/master/%E6%A0%91)  
         * [字典树](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E5%AD%97%E5%85%B8%E6%A0%91-%E5%89%8D%E7%BC%80%E6%A0%91.py)  
         * [遍历-层次遍历](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E9%81%8D%E5%8E%86-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86.py)  
         * [遍历-中序遍历-非递归](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E9%81%8D%E5%8E%86-%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E9%9D%9E%E9%80%92%E5%BD%92.py)  
