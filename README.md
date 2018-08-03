@@ -13,7 +13,10 @@
         * [二叉查找树-从有序数组中构造二叉查找树](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91-%E4%BB%8E%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91.py)  
         * [二叉查找树-从有序链表构造平衡的二叉查找树](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91-%E4%BB%8E%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E6%9E%84%E9%80%A0%E5%B9%B3%E8%A1%A1%E7%9A%84%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91.py)  
         * [二叉树-的最大深度](https://github.com/whtlkeep/BAT-algorithms/blob/master/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91-%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.py)  
-       
+* [位运算](https://github.com/whtlkeep/BAT-algorithms/tree/master/%E4%BD%8D%E8%BF%90%E7%AE%97)  
+* [数组](https://github.com/whtlkeep/BAT-algorithms/tree/master/%E6%95%B0%E7%BB%84)  
+* [动态规划](https://github.com/whtlkeep/BAT-algorithms/tree/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)  
+
 
 数据结构资源链接：https://pan.baidu.com/s/1PNOUUGm4sYCRmasttrm8SA 密码：f8l7
 
