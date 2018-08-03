@@ -61,6 +61,6 @@ def lowestCommonAncestor(root, p, q):
     if left == None:
         return right
     elif right == None:
-            return left
+        return left
     else:
-         return root
+        return root
