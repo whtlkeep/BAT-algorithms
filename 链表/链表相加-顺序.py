@@ -37,7 +37,6 @@ def reverse_single_list(head):
 def add(l1, l2):
     l1stack = reverse_single_list(l1)
     l2stack = reverse_single_list(l2)
-    print(l1stack, l2stack)
     carry = 0  # 进位
     l_head = ListNode(-1)  # 创建一个头结点，再运算完后需要删除
     while len(l1stack) > 0 and len(l2stack)> 0:
