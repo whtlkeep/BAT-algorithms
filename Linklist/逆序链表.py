@@ -9,12 +9,13 @@
         如： 1  - >  2 - > 3 -> 4                 2 - > 3 -> 4  ->  1
             ---     --------------   交换         ------------     ---
             一个         一串                         一串         一个
-        对上面的一串再今天同样的递归操作，最后得到的便是逆序的
+        对上面的一串再进行同样的递归操作，最后得到的便是逆序的
 
     * 头插法
         新建一个头结点，遍历单链表，将每个结点插入到该头结点后面，即可实现逆序
 """
 from utils import build_single_list, print_single_list, ListNode
+
 
 # def reverseList(head):
 #     if head == None or head.next == None:
@@ -36,5 +37,5 @@ def reverseList(head):
 
 
 if __name__ == '__main__':
-    head = build_single_list([1,2,3,4])
+    head = build_single_list([1, 2, 3, 4])
     print_single_list(reverseList(head))
