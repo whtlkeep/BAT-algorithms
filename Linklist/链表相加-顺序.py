@@ -19,7 +19,8 @@
     本题：利用stack将链表逆序
 """
 
-from utils import build_single_list, print_single_list, ListNode
+from Linklist.utils import build_single_list, print_single_list, ListNode
+
 
 def reverse_single_list(head):
     """
@@ -34,12 +35,13 @@ def reverse_single_list(head):
         p = p.next
     return stack
 
+
 def add(l1, l2):
     l1stack = reverse_single_list(l1)
     l2stack = reverse_single_list(l2)
     carry = 0  # 进位
     l_head = ListNode(-1)  # 创建一个头结点，再运算完后需要删除
-    while len(l1stack) > 0 and len(l2stack)> 0:
+    while len(l1stack) > 0 and len(l2stack) > 0:
         value = l1stack.pop() + l2stack.pop() + carry
         carry = value // 10
         value = value % 10
@@ -68,6 +70,6 @@ def add(l1, l2):
 
 
 if __name__ == '__main__':
-    l1 = build_single_list([9, 9, 9 ])
+    l1 = build_single_list([9, 9, 9])
     l2 = build_single_list([1])
     print_single_list(add(l1, l2))

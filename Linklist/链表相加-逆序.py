@@ -17,7 +17,7 @@
     加法运算都是从个位数开始加的，注意进位
     逆序表示的数据，正好可以从头向后依次相加
 """
-from utils import build_single_list, print_single_list, ListNode
+from Linklist.utils import build_single_list, print_single_list, ListNode
 
 
 def add(l1, l2):
@@ -53,7 +53,7 @@ def add(l1, l2):
 
 if __name__ == '__main__':
     # 创建一个单链表l1    4 -> 9 -> 0 -> 4 -> 7 -> 1
-    l1 = build_single_list([9,9,9])
+    l1 = build_single_list([9, 9, 9])
     # 创建一个单链表l2    1 -> 7 -> 1 -> 5 -> 5 -> 4 -> 2 -> 8
     l2 = build_single_list([1])
-    print_single_list(head=add(l1, l2),pType="SINGLE")
+    print_single_list(head=add(l1, l2), pType="SINGLE")

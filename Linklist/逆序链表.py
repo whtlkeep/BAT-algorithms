@@ -14,7 +14,7 @@
     * 头插法
         新建一个头结点，遍历单链表，将每个结点插入到该头结点后面，即可实现逆序
 """
-from utils import build_single_list, print_single_list, ListNode
+from Linklist.utils import build_single_list, print_single_list, ListNode
 
 
 # def reverseList(head):

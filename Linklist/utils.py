@@ -2,10 +2,12 @@
     本模块只是想实现若干个链表的基本函数，方便其他的代码实现和测试
 """
 
-class ListNode():
+
+class ListNode(object):
     def __init__(self, val):
         self.val = val
         self.next = None
+
 
 def build_single_list(alist):
     head = ListNode(alist[0])
@@ -15,11 +17,12 @@ def build_single_list(alist):
         cur = cur.next
     return head
 
-def print_single_list(head, pType = "STR"):
+
+def print_single_list(head, pType="STR"):
     p = head
     result = []
     while p:
-        if pType in ["STR","SINGLE"]:
+        if pType in ["STR", "SINGLE"]:
             result.append(str(p.val))
         else:
             result.append(p.val)
