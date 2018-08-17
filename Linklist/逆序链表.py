@@ -26,16 +26,16 @@ from Linklist.utils import build_single_list, print_single_list, ListNode
 #     head.next = None
 #     return newhead
 
-def reverseList(head):
-    newhead = ListNode(-1)  # 头结点
+def reverse_list(head):
+    new_head = ListNode(-1)  # 头结点
     while head:
         next = head.next
-        head.next = newhead.next
-        newhead.next = head
+        head.next = new_head.next
+        new_head.next = head
         head = next
-    return newhead.next
+    return new_head.next
 
 
 if __name__ == '__main__':
     head = build_single_list([1, 2, 3, 4])
-    print_single_list(reverseList(head))
+    print_single_list(reverse_list(head))

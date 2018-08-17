@@ -9,13 +9,16 @@ class ListNode(object):
         self.next = None
 
 
-def build_single_list(alist):
-    head = ListNode(alist[0])
+def build_single_list(nums):
+    head = ListNode(nums[0])
     cur = head
-    for i in alist[1:]:
+    for i in nums[1:]:
         cur.next = ListNode(i)
         cur = cur.next
     return head
+
+
+
 
 
 def print_single_list(head, pType="STR"):

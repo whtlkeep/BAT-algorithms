@@ -12,43 +12,36 @@
     如：输入 2 -> 4 -> 3, 5 -> 6 -> 4, 得到 7 -> 0 -> 8.
                 342     +     465       =      807
 
-二、思路
+二、思路 同其他几种"加法"
     题目的本质是加法运算，注意加法的进位情况，和链表的一些特性即可
     加法运算都是从个位数开始加的，注意进位
     逆序表示的数据，正好可以从头向后依次相加
+    
+    下面的循环的结构是任何加法运算（二进制、字符串、链表）的通用结构，值得仔细品味
 """
+
+
 from Linklist.utils import build_single_list, print_single_list, ListNode
 
 
-def add(l1, l2):
-    carry = 0  # 进位
-    l_head = ListNode(-1)  # 创建一个头结点，再运算完后需要删除
-    l_Tail = l_head
-    while l1 and l2:
-        value = l1.val + l2.val + carry
-        carry = value // 10
-        value = value % 10
-        l_Tail.next = ListNode(value)
-        l_Tail = l_Tail.next
-        l1 = l1.next
-        l2 = l2.next
-
-    # 看看哪个链表比较长，继续做加法
-    l3 = None
-    if l1:
-        l3 = l1
-    else:
-        l3 = l2
-    while l3:
-        value = l3.val + carry
-        carry = value // 10
-        value = value % 10
-        l_Tail.next = ListNode(value)
-        l_Tail = l_Tail.next
-        l3 = l3.next
-    if carry != 0:  # 处理可能存在的进位
-        l_Tail.next = ListNode(carry)
-    return l_head.next  # 跳过头结点才是正确的解
+def add(head1, head2):
+    cur1 = head1
+    cur2 = head2
+    carry = 0
+    new_head = ListNode(-1)
+    new_cur = new_head
+    while carry > 0 or cur1 is not None or cur2 is not None:
+        if cur1 is not None:
+            carry += cur1.val
+            cur1 = cur1.next
+        if cur2 is not None:
+            carry += cur2.val
+            cur2 = cur2.next
+        # 将求和结果利用“尾插法”，得到逆序链表
+        new_cur.next = ListNode(carry % 10)
+        new_cur = new_cur.next
+        carry = int(carry / 10)
+    return new_head.next
 
 
 if __name__ == '__main__':
