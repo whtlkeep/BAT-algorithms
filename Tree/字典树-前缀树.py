@@ -36,7 +36,7 @@ class Trie(object):
             node.isLeaf = True
             return
         index = ord(word[0]) - ord('a')
-        if node.childs[index] == None:
+        if node.childs[index] is None:
             node.childs[index] = Node()
         self.inserthelper(word[1:], node.childs[index])
 
@@ -49,7 +49,7 @@ class Trie(object):
         return self.searchhepler(word, self.root)
 
     def searchhepler(self, word, node):
-        if node == None:
+        if node is None:
             return False
         if len(word) == 0:
             return node.isLeaf
@@ -65,7 +65,7 @@ class Trie(object):
         return self.startsWithhelper(prefix, self.root)
 
     def startsWithhelper(self, prefix, node):
-        if node == None:
+        if node is None:
             return False
         if len(prefix) == 0:
             return True

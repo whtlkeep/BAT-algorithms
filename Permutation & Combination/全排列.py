@@ -4,15 +4,15 @@ array=[1,2,3,4],start是排列的起始位
 """
 
 
-def Permutation(array, start=0):
-    size = len(array)
+def permutation(nums, start=0):
+    size = len(nums)
     if start == size - 1:
-        print(array)
+        print(nums)
         return
     for i in range(start, size):
-        array[i], array[start] = array[start], array[i]
-        Permutation(array, start + 1)
-        array[i], array[start] = array[start], array[i]
+        nums[i], nums[start] = nums[start], nums[i]
+        permutation(nums, start + 1)
+        nums[i], nums[start] = nums[start], nums[i]
 
 
 # ---------------------- important --------------------------
@@ -22,19 +22,19 @@ array=[1,3,3,4],start是排列的起始位
 """
 
 
-def Permutation(array, start=0):
-    size = len(array)
+def permutation(nums, start=0):
+    size = len(nums)
     if start == size - 1:
-        print(array)
+        print(nums)
         return
     dup = set()
     for i in range(start, size):
-        if array[i] in dup:
+        if nums[i] in dup:
             continue
-        dup.add(array[i])
-        array[i], array[start] = array[start], array[i]
-        Permutation(array, start + 1)
-        array[i], array[start] = array[start], array[i]
+        dup.add(nums[i])
+        nums[i], nums[start] = nums[start], nums[i]
+        permutation(nums, start + 1)
+        nums[i], nums[start] = nums[start], nums[i]
 
 
 """ *******全排列的非递归算法*****************
@@ -52,39 +52,39 @@ def Permutation(array, start=0):
 """
 
 
-def GetNextPermutation(array):
-    size = len(array)
+def get_next_permutation(nums):
+    size = len(nums)
     # 后找
     i = size - 2
-    while i >= 0 and array[i] >= array[i + 1]:
+    while i >= 0 and nums[i] >= nums[i + 1]:
         i -= 1
     if i < 0:
         return False
 
     # 小大
     j = size - 1
-    while array[j] <= array[i]:
+    while nums[j] <= nums[i]:
         j -= 1
 
     # 交换
-    array[j], array[i] = array[i], array[j]
+    nums[j], nums[i] = nums[i], nums[j]
 
     # 翻转
-    Reverse(array, i + 1, size - 1)
+    reverse(nums, i + 1, size - 1)
     return True
 
 
-def Reverse(array, start, end):
+def reverse(nums, start, end):
     while start < end:
-        array[start], array[end] = array[end], array[start]
+        nums[start], nums[end] = nums[end], nums[start]
         start += 1
         end -= 1
 
 
-def Permutation(array):
-    print(array)
-    while GetNextPermutation(array):
-        print(array)
+def permutation(nums):
+    print(nums)
+    while get_next_permutation(nums):
+        print(nums)
 
 
 # ---------------------- important --------------------------

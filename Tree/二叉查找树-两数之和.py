@@ -29,13 +29,13 @@ class TreeNode(object):
 
 
 # 中序遍历 非递归实现
-def inorderTraversal(root, nums):
+def inorder_traversal(root, nums):
     stack = []
     cur = root
-    if root == None:
+    if root is None:
         return nums
-    while len(stack) != 0 or cur != None:
-        while cur != None:
+    while len(stack) != 0 or cur is not None:
+        while cur is not None:
             stack.append(cur)
             cur = cur.left
         node = stack.pop()
@@ -50,7 +50,7 @@ def findTarget(root, k):
     :rtype: bool
     """
     nums = []
-    inorderTraversal(root, nums)
+    inorder_traversal(root, nums)
     start = 0
     end = len(nums) - 1
     while start < end:
@@ -61,3 +61,10 @@ def findTarget(root, k):
         else:
             end -= 1
     return False
+
+
+if __name__ == '__main__':
+    from Tree.tree import construct_tree
+
+    root = construct_tree()
+    print(findTarget(root, 9))

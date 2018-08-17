@@ -39,7 +39,7 @@ def pre_Mid(head):
     slow = head
     fast = head.next
     pre = head
-    while fast != None and fast.next != None:
+    while fast is not None and fast.next is not None:
         pre = slow
         slow = slow.next
         fast = fast.next.next
@@ -47,9 +47,9 @@ def pre_Mid(head):
 
 
 def sortedListToBST(head):
-    if head == None:
+    if head is None:
         return None
-    if head.next == None:
+    if head.next is None:
         return TreeNode(head.val)
 
     preMid = pre_Mid(head)

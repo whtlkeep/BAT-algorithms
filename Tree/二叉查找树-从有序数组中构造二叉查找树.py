@@ -20,15 +20,15 @@ class TreeNode(object):
         self.right = None
 
 
-def toBST(nums, start, end):
+def to_BST(nums, start, end):
     if start > end:
         return None
     middle = (start + end) >> 1
     root = TreeNode(nums[middle])
-    root.left = toBST(nums, start, middle - 1)
-    root.right = toBST(nums, middle + 1, end)
+    root.left = to_BST(nums, start, middle - 1)
+    root.right = to_BST(nums, middle + 1, end)
     return root
 
 
 def sortedArrayToBST(nums):
-    return toBST(nums, 0, len(nums) - 1)
+    return to_BST(nums, 0, len(nums) - 1)

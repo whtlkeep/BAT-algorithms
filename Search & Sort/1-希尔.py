@@ -10,19 +10,19 @@
 """
 
 
-def shell_sort(alist):
-    size = len(alist)
+def shell_sort(nums):
+    size = len(nums)
     gap = size >> 1
     while gap > 0:
         for i in range(gap, size):
             j = i
-            while j >= gap and alist[j - gap] > alist[j]:
-                alist[j - gap], alist[j] = alist[j], alist[j - gap]
+            while j >= gap and nums[j - gap] > nums[j]:
+                nums[j - gap], nums[j] = nums[j], nums[j - gap]
                 j -= gap
         gap = gap >> 1
 
 
 if __name__ == '__main__':
-    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    shell_sort(alist)
-    print(alist)
+    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    shell_sort(nums)
+    print(nums)

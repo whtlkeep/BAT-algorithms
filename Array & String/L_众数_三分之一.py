@@ -4,11 +4,11 @@
 """
 
 
-def findMode(array):
-    size = len(array)
+def find_mode(nums):
+    size = len(nums)
     m, n = 0, 0
     cm, cn = 0, 0
-    for a in array:
+    for a in nums:
         if cm == 0:
             m, cm = a, 1
         elif cn == 0:
@@ -21,7 +21,7 @@ def findMode(array):
             cm -= 1
             cn -= 1
     cm, cn = 0, 0
-    for a in array:
+    for a in nums:
         if a == m:
             cm += 1
         elif a == n:
@@ -34,5 +34,5 @@ def findMode(array):
     return result
 
 
-array = [1, 2, 3, 2, 5, 2, 2, 3, 3, 2, 3]
-print(findMode(array))
+nums = [1, 2, 3, 2, 5, 2, 2, 3, 3, 2, 3]
+print(find_mode(nums))

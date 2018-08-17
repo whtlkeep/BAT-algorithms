@@ -11,7 +11,7 @@ def pre_order_traversal(root):  # 前序
     stack.append(root)
     while len(stack) != 0:
         node = stack.pop()
-        if node == None:
+        if node is None:
             continue
         result.append(node.val)
         stack.append(node.right)

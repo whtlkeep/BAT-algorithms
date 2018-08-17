@@ -23,7 +23,7 @@ class TreeNode(object):
 
 # 采用递归的思路求一棵树的节点个数
 def count(node):
-    if node == None:
+    if node is None:
         return 0
     return count(node.left) + count(node.right) + 1
 

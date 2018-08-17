@@ -40,7 +40,7 @@ class TreeNode(object):
 
 
 # 计算一颗完全二叉树的树高
-def countHeight(node):
+def count_height(node):
     height = 0
     while node:
         height += 1
@@ -48,20 +48,20 @@ def countHeight(node):
     return height
 
 
-def findLastNode(root):
-    if root == None:
+def find_last_node(root):
+    if root is None:
         return
-    left_count = countHeight(root.left)
-    right_count = countHeight(root.right)
+    left_count = count_height(root.left)
+    right_count = count_height(root.right)
     if left_count != right_count:  # 如果左右子树的树高不等，则最后一个节点在左子树中（性质2）
-        return findLastNode(root.left)
+        return find_last_node(root.left)
     elif left_count == right_count:
         if left_count == 0:  # 树没有孩子节点，则该根节点是最后一个节点
             return root
         elif left_count == 1:  # 有左右孩子节点，都是叶节点,右孩子是最后一个节点
             return root.right
         else:  # 如果左右子树的树高相等，则最后一个节点在右子树中
-            return findLastNode(root.right)
+            return find_last_node(root.right)
 
 
 if __name__ == '__main__':
@@ -71,4 +71,4 @@ if __name__ == '__main__':
     root.left.left = TreeNode(2)
     root.left.right = TreeNode(4)
     root.right.left = TreeNode(7)
-    print(findLastNode(root).val)
+    print(find_last_node(root).val)

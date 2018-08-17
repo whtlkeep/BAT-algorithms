@@ -17,19 +17,19 @@
 """
 
 
-def findmin(array):
-    size = len(array)
+def find_min(nums):
+    size = len(nums)
     low = 0
     high = size - 1
     while low < high:
         mid = (low + high) >> 1
-        if array[mid] < array[high]:
+        if nums[mid] < nums[high]:
             high = mid
-        elif array[mid] > array[high]:
+        elif nums[mid] > nums[high]:
             low = mid + 1
-    return array[low]
+    return nums[low]
 
 
 if __name__ == '__main__':
     array = [4, 5, 6, 7, 0, 1, 2]
-    print(findmin(array))
+    print(find_min(array))

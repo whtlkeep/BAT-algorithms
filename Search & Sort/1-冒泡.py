@@ -14,15 +14,15 @@
 """
 
 
-def bubble_sort(alist):
-    for j in range(len(alist) - 1, 0, -1):  # j的取值是[len(alist)-1,len(alist)-2,.....,1]
+def bubble_sort(nums):
+    for j in range(len(nums) - 1, 0, -1):  # j的取值是[len(alist)-1,len(alist)-2,.....,1]
         # j 表示每次遍历需要比较的次数，是逐渐减小的
         for i in range(j):
-            if alist[i] > alist[i + 1]:
-                alist[i], alist[i + 1] = alist[i + 1], alist[i]
+            if nums[i] > nums[i + 1]:
+                nums[i], nums[i + 1] = nums[i + 1], nums[i]
 
 
 if __name__ == '__main__':
-    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    bubble_sort(alist)
-    print(alist)
+    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    bubble_sort(nums)
+    print(nums)

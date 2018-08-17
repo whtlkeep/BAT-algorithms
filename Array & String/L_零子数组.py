@@ -14,11 +14,11 @@
 
 
 # 子数组的和最接近0，求这个数
-def min_sub_array_num(array):
-    size = len(array)
+def min_sub_array_num(nums):
+    size = len(nums)
     sum_ = [0] * (size + 1)
     i = 1
-    for a in array:
+    for a in nums:
         sum_[i] = sum_[i - 1] + a
         i += 1
     sum_ = sorted(sum_)
@@ -33,13 +33,13 @@ def min_sub_array_num(array):
 
 # 子数组的和最接近0，求这个子数组
 # 利用字典存储一下每一个sum对应的index, 这样在排序后，可以利用index找出该子数组
-def min_sub_array(array):
-    size = len(array)
+def min_sub_array(nums):
+    size = len(nums)
     sum_ = dict()
     for i in range(-1, size):
         sum_[i] = 0
     i = 0
-    for a in array:
+    for a in nums:
         sum_[i] = sum_[i - 1] + a
         i += 1
     sum_ = sorted(sum_.items(), key=lambda d: d[1])
@@ -52,7 +52,7 @@ def min_sub_array(array):
         if result == difference:
             start = min(sum_[i + 1][0], sum_[i][0])
             end = max(sum_[i + 1][0], sum_[i][0])
-    return result, array[start + 1: end + 1]
+    return result, nums[start + 1: end + 1]
 
 
 if __name__ == '__main__':

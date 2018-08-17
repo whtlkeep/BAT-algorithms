@@ -17,18 +17,18 @@
 
 
 #  调整堆,把最大值调整到堆顶
-def adjust_heap(lists, i, size):
+def adjust_heap(nums, i, size):
     lchild = 2 * i + 1
     rchild = 2 * i + 2
     max = i
     if i < size / 2:
-        if lchild < size and lists[lchild] > lists[max]:
+        if lchild < size and nums[lchild] > nums[max]:
             max = lchild
-        if rchild < size and lists[rchild] > lists[max]:
+        if rchild < size and nums[rchild] > nums[max]:
             max = rchild
         if max != i:
-            lists[max], lists[i] = lists[i], lists[max]
-            adjust_heap(lists, max, size)
+            nums[max], nums[i] = nums[i], nums[max]
+            adjust_heap(nums, max, size)
 
 
 # 创建堆
@@ -48,6 +48,6 @@ def heap_sort(lists):
 
 
 if __name__ == '__main__':
-    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    result = heap_sort(alist)
+    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    result = heap_sort(nums)
     print(result)

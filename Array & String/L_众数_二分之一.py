@@ -5,11 +5,10 @@ A  = [1,2,1,3,1]  ， 1是绝对众数
 
 
 # 已知给定的数组存在绝对众数，求
-def Mode(array):
-    size = len(array)
+def mode(nums):
     count = 0
-    m = array[0]
-    for a in array:
+    m = nums[0]
+    for a in nums:
         if count == 0:
             m = a
             count = 1
@@ -21,4 +20,4 @@ def Mode(array):
 
 
 array = [8, 8, 1, 1, 1, 8, 1, 1, 6, 1, 8, 8, 8, 8]
-print(Mode(array))
+print(mode(array))

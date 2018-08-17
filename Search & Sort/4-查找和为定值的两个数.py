@@ -13,37 +13,37 @@
 """
 
 
-def two_sum1(array, s):
-    def quick_sort(alist, start, end):  # 快速排序
+def two_sum1(nums, s):
+    def quick_sort(nums, start, end):  # 快速排序
         if start >= end:
             return
-        pivot = alist[start]  # 基准值
+        pivot = nums[start]  # 基准值
         low = start  # 左指针
         high = end  # 右指针
         while low < high:
-            while low < high and alist[high] >= pivot:
+            while low < high and nums[high] >= pivot:
                 high -= 1
-            alist[low] = alist[high]
+            nums[low] = nums[high]
 
-            while low < high and alist[low] < pivot:
+            while low < high and nums[low] < pivot:
                 low += 1
-            alist[high] = alist[low]
-        alist[low] = pivot
-        quick_sort(alist, start, low - 1)
-        quick_sort(alist, low + 1, end)
+            nums[high] = nums[low]
+        nums[low] = pivot
+        quick_sort(nums, start, low - 1)
+        quick_sort(nums, low + 1, end)
 
-    quick_sort(array, 0, len(array) - 1)
-    size = len(array)
+    quick_sort(nums, 0, len(nums) - 1)
+    size = len(nums)
     start = 0
     end = size - 1
     result = []
     while start < end:
-        if array[start] + array[end] < s:
+        if nums[start] + nums[end] < s:
             start += 1
-        elif array[start] + array[end] > s:
+        elif nums[start] + nums[end] > s:
             end -= 1
         else:
-            result.append([array[start], array[end]])
+            result.append([nums[start], nums[end]])
             start += 1
             end -= 1
     return result
@@ -63,4 +63,4 @@ def two_sum2(array, s):
 
 if __name__ == '__main__':
     array = [0, 3, 7, 9, 10, 11, 14, 16, 17]
-    print(two_sum2(array, 1))
+    print(two_sum2(array, 3))

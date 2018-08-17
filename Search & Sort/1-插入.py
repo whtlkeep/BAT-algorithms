@@ -9,14 +9,14 @@
 """
 
 
-def insert_sort(alist):
-    for i in range(1, len(alist)):
+def insert_sort(nums):
+    for i in range(1, len(nums)):
         for j in range(i, 0, -1):
-            if alist[j] < alist[j - 1]:
-                alist[j], alist[j - 1] = alist[j - 1], alist[j]
+            if nums[j] < nums[j - 1]:
+                nums[j], nums[j - 1] = nums[j - 1], nums[j]
 
 
 if __name__ == '__main__':
-    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
     insert_sort(alist)
     print(alist)

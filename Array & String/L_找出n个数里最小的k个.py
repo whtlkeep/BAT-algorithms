@@ -9,34 +9,34 @@
 """
 
 
-def find_min_topk(array, k):
+def find_min_top_k(nums, k):
     # 快速排序
-    def quick_sort(alist, start, end, k):
+    def quick_sort(nums, start, end, k):
         if start >= end:
             return
-        pivot = alist[start]  # 基准值
+        pivot = nums[start]  # 基准值
         low = start
         high = end
         while low < high:
-            while low < high and alist[high] >= pivot:
+            while low < high and nums[high] >= pivot:
                 high -= 1
-            alist[low] = alist[high]
-            while low < high and alist[low] < pivot:
+            nums[low] = nums[high]
+            while low < high and nums[low] < pivot:
                 low += 1
-            alist[high] = alist[low]
-        alist[low] = pivot
+            nums[high] = nums[low]
+        nums[low] = pivot
         if low == k - 1:
             return
         elif low < k - 1:
-            quick_sort(alist, low + 1, end, k)
+            quick_sort(nums, low + 1, end, k)
         else:
-            quick_sort(alist, start, low - 1, k)
+            quick_sort(nums, start, low - 1, k)
 
-    quick_sort(array, 0, len(array) - 1, k)
-    result = [i for i in sorted(array[0:k])]
+    quick_sort(nums, 0, len(nums) - 1, k)
+    result = [i for i in sorted(nums[0:k])]
     return result
 
 
 if __name__ == '__main__':
     array = [1, 2, 3, -1, 2, 199, 100]
-    print(find_min_topk(array, 5))
+    print(find_min_top_k(array, 6))

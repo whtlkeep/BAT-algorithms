@@ -52,7 +52,7 @@ def countHeight(node):
     return height
 
 
-def count_Complete_Num(height):
+def count_complete_Num(height):
     """
     计算一颗满完全二叉树的节点个数
     :param height: 树高
@@ -65,19 +65,19 @@ def count_Complete_Num(height):
 
 
 def tree_node_count(root):
-    if root == None:
+    if root is None:
         return 0
     left_count = countHeight(root.left)
     right_count = countHeight(root.right)
     if left_count != right_count:  # 如果左右子树的树高不等，则右子树是一颗满完全二叉树
-        return 1 + count_Complete_Num(right_count) + tree_node_count(root.left)
+        return 1 + count_complete_Num(right_count) + tree_node_count(root.left)
     elif left_count == right_count:
         if left_count == 0:  # 树没有孩子节点
             return 1
         elif left_count == 1:  # 有左右孩子节点，都是叶节点
             return 3
         else:  # 如果左右子树的树高相等，则左子树是一颗满完全二叉树
-            return 1 + count_Complete_Num(left_count) + tree_node_count(root.right)
+            return 1 + count_complete_Num(left_count) + tree_node_count(root.right)
 
 
 if __name__ == '__main__':

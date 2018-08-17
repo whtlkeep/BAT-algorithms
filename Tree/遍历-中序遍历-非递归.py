@@ -8,11 +8,11 @@ class TreeNode(object):
 def in_order_traversal(root):  # 中序
     res = []
     stack = []
-    if root == None:
+    if root is None:
         return res
     cur = root
-    while len(stack) != 0 or cur != None:
-        while cur != None:
+    while len(stack) != 0 or cur is not None:
+        while cur is not None:
             stack.append(cur)
             cur = cur.left
         node = stack.pop()

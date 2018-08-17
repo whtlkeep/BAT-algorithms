@@ -12,45 +12,44 @@ count = [0]
 pairs = []
 
 
-def Merge(array, low, mid, high):
+def Merge(nums, low, mid, high):
     i = low
     j = mid + 1
     size = 0
     while i <= mid and j <= high:
-        if array[i] < array[j]:
-            temp[size] = array[i]
+        if nums[i] < nums[j]:
+            temp[size] = nums[i]
             i += 1
         else:
             # 除了以下三行代码，其余代码与归并排序一模一样
             count[0] += (mid - i + 1)
             for h in range(i, mid + 1):
-                pairs.append((array[h], array[j]))
-            temp[size] = array[j]
+                pairs.append((nums[h], nums[j]))
+            temp[size] = nums[j]
             j += 1
         size += 1
     while i <= mid:
-        temp[size] = array[i]
+        temp[size] = nums[i]
         size += 1
         i += 1
     while j <= high:
-        temp[size] = array[j]
+        temp[size] = nums[j]
         size += 1
         j += 1
     for i in range(size):
-        array[low + i] = temp[i]
+        nums[low + i] = temp[i]
 
 
-def Merge_sort(array, low, high):
+def Merge_sort(nums, low, high):
     if low >= high:
         return
     mid = (low + high) >> 1
-    Merge_sort(array, low, mid)
-    Merge_sort(array, mid + 1, high)
-    Merge(array, low, mid, high)
+    Merge_sort(nums, low, mid)
+    Merge_sort(nums, mid + 1, high)
+    Merge(nums, low, mid, high)
 
 
 if __name__ == '__main__':
-    array = [3, 56, 2, 7, 45, 8, 1]
-    Merge_sort(array, 0, len(array) - 1)
-    print(count[0])
+    nums = [3, 56, 2, 7, 45, 8, 1]
+    Merge_sort(nums, 0, len(nums) - 1)
     print(pairs)

@@ -32,12 +32,12 @@ def merge(left, right):  # 合并两个有序数组
     return result
 
 
-def merge_sort(alist):
-    if len(alist) <= 1:
-        return alist
-    num = len(alist) >> 1
-    left = merge_sort(alist[:num])
-    right = merge_sort(alist[num:])
+def merge_sort(nums):
+    if len(nums) <= 1:
+        return nums
+    num = len(nums) >> 1
+    left = merge_sort(nums[:num])
+    right = merge_sort(nums[num:])
     return merge(left, right)
 
 
@@ -46,40 +46,40 @@ def merge_sort(alist):
 temp = [0] * 100
 
 
-def Merge(array, low, mid, high):
+def Merge(nums, low, mid, high):
     i = low
     j = mid + 1
     size = 0
     while i <= mid and j <= high:
-        if array[i] < array[j]:
-            temp[size] = array[i]
+        if nums[i] < nums[j]:
+            temp[size] = nums[i]
             i += 1
         else:
-            temp[size] = array[j]
+            temp[size] = nums[j]
             j += 1
         size += 1
     while i <= mid:
-        temp[size] = array[i]
+        temp[size] = nums[i]
         size += 1
         i += 1
     while j <= high:
-        temp[size] = array[j]
+        temp[size] = nums[j]
         size += 1
         j += 1
     for i in range(size):
-        array[low + i] = temp[i]
+        nums[low + i] = temp[i]
 
 
-def Merge_sort(array, low, high):
+def Merge_sort(nums, low, high):
     if low >= high:
         return
     mid = (low + high) >> 1
-    Merge_sort(array, low, mid)
-    Merge_sort(array, mid + 1, high)
-    Merge(array, low, mid, high)
+    Merge_sort(nums, low, mid)
+    Merge_sort(nums, mid + 1, high)
+    Merge(nums, low, mid, high)
 
 
 if __name__ == '__main__':
-    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    Merge_sort(alist, 0, len(alist) - 1)
-    print(alist)
+    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    Merge_sort(nums, 0, len(nums) - 1)
+    print(nums)

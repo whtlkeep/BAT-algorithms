@@ -27,8 +27,8 @@ class TreeNode:
         self.right = None
 
 
-def PrintFromTopToBottom(root):
-    if root == None:
+def print_from_top_to_bottom(root):
+    if root is None:
         return []
     # 用一个list和一个索引index模拟队列的先进先出
     queue = []
@@ -42,9 +42,16 @@ def PrintFromTopToBottom(root):
             temp = queue[index]
             index += 1
             res.append(temp.val)
-            if temp.left != None:
+            if temp.left is not None:
                 queue.append(temp.left)
-            if temp.right != None:
+            if temp.right is not None:
                 queue.append(temp.right)
         result.append(res)
     return result
+
+
+if __name__ == '__main__':
+    from Tree.tree import construct_tree
+
+    root = construct_tree()
+    print(print_from_top_to_bottom(root))

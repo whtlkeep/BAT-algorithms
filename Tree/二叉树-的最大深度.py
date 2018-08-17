@@ -17,11 +17,14 @@ class TreeNode(object):
         self.right = None
 
 
-def maxDepth(root):
-    """
-    :type root: TreeNode
-    :rtype: int
-    """
-    if root == None:
+def max_depth(root):
+    if root is None:
         return 0
-    return max(maxDepth(root.left) + 1, maxDepth(root.right) + 1)
+    return max(max_depth(root.left) + 1, max_depth(root.right) + 1)
+
+
+if __name__ == '__main__':
+    from Tree.tree import construct_tree
+
+    root = construct_tree()
+    print(max_depth(root))

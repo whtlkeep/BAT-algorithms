@@ -54,13 +54,13 @@ def lowestCommonAncestor(root, p, q):
 
 
 def lowestCommonAncestor(root, p, q):
-    if root == None or root == p or root == q:
+    if root is None or root == p or root == q:
         return root
     left = lowestCommonAncestor(root.left, p, q)
     right = lowestCommonAncestor(root.right, p, q)
-    if left == None:
+    if left is None:
         return right
-    elif right == None:
+    elif right is None:
         return left
     else:
         return root

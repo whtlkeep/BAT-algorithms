@@ -1,16 +1,16 @@
-#  本方法是 a 在array中，则返回对应的index
-def binary_find1(array, a):
-    size = len(array)
+#  本方法是 a 在nums中，则返回对应的index
+def binary_find1(nums, a):
+    size = len(nums)
     start = 0
     end = size - 1
     bFind = False
     middle = 0
     while start <= end:
         middle = (start + end) >> 1
-        if array[middle] == a:
+        if nums[middle] == a:
             bFind = True
             break
-        if array[middle] > a:
+        if nums[middle] > a:
             end = middle - 1
         else:
             start = middle + 1

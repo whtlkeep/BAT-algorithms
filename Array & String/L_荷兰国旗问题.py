@@ -21,20 +21,20 @@
 """
 
 
-def hollandr(array):
-    size = len(array)
+def hollandr(nums):
+    size = len(nums)
     begin = 0
     cur = 0
     end = size - 1
     while cur <= end:
-        if array[cur] == 2:
-            array[cur], array[end] = array[end], array[cur]
+        if nums[cur] == 2:
+            nums[cur], nums[end] = nums[end], nums[cur]
             end -= 1
-        elif array[cur] == 1:
+        elif nums[cur] == 1:
             cur += 1
         else:
             if cur != begin:
-                array[cur], array[begin] = array[begin], array[cur]
+                nums[cur], nums[begin] = nums[begin], nums[cur]
             begin += 1
             cur += 1
 

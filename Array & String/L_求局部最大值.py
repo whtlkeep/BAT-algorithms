@@ -5,17 +5,17 @@
 """
 
 
-def localmaximum(array):
+def local_maximum(nums):
     start = 0
-    end = len(array) - 1
+    end = len(nums) - 1
     while start < end:
         mid = (start + end) >> 1
-        if array[mid] > array[mid + 1]:
+        if nums[mid] > nums[mid + 1]:
             end = mid
         else:
             start = mid + 1
-    return array[start]
+    return nums[start]
 
 
 array = [1, 2, 1, 3, 1, 1, 1, 1, 9]
-print(localmaximum(array))
+print(local_maximum(array))
