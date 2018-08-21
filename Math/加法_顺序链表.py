@@ -19,7 +19,7 @@
     下面的循环的结构是任何加法运算（二进制、字符串、链表）的通用结构，值得仔细品味
 """
 
-from Linklist.utils import build_single_list, print_single_list, ListNode
+from Linklist.utils import build_l, print_l, ListNode
 
 
 def reverse_list(head):
@@ -59,6 +59,6 @@ def add(head1, head2):
 
 
 if __name__ == '__main__':
-    l1 = build_single_list([8, 9, 9])
-    l2 = build_single_list([9, 0, 1])
-    print_single_list(add(l1, l2))
+    l1 = build_l([8, 9, 9])
+    l2 = build_l([9, 0, 1])
+    print_l(add(l1, l2))

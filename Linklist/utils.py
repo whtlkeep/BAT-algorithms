@@ -9,7 +9,7 @@ class ListNode(object):
         self.next = None
 
 
-def build_single_list(nums):
+def build_l(nums):
     head = ListNode(nums[0])
     cur = head
     for i in nums[1:]:
@@ -18,10 +18,7 @@ def build_single_list(nums):
     return head
 
 
-
-
-
-def print_single_list(head, pType="STR"):
+def print_l(head, pType="STR"):
     p = head
     result = []
     while p:

@@ -21,7 +21,7 @@
 """
 
 
-from Linklist.utils import build_single_list, print_single_list, ListNode
+from Linklist.utils import build_l, print_l, ListNode
 
 
 def add(head1, head2):
@@ -46,7 +46,7 @@ def add(head1, head2):
 
 if __name__ == '__main__':
     # 创建一个单链表l1    4 -> 9 -> 0 -> 4 -> 7 -> 1
-    l1 = build_single_list([9, 9, 9])
+    l1 = build_l([9, 9, 9])
     # 创建一个单链表l2    1 -> 7 -> 1 -> 5 -> 5 -> 4 -> 2 -> 8
-    l2 = build_single_list([1])
-    print_single_list(head=add(l1, l2), pType="SINGLE")
+    l2 = build_l([1])
+    print_l(head=add(l1, l2), pType="SINGLE")
