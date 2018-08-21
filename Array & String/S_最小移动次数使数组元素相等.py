@@ -26,14 +26,14 @@
 
 def min_moves(nums):
     k = (len(nums) >> 1) + 1
-    median = find_min_Kth(nums, k)
+    median = find_min_k_th(nums, k)
     count = 0
     for num in nums:
         count += abs(num - median)
     return count
 
 
-def find_min_Kth(nums, k):
+def find_min_k_th(nums, k):
     # 快速排序
     def quick_sort(nums, start, end, k):
         if start >= end:
