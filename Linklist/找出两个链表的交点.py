@@ -24,9 +24,9 @@
 """
 
 
-def get_intersection_node(headA, headB):
-    cur1, cur2 = headA, headB
+def get_intersection_node(head1, head2):
+    cur1, cur2 = head1, head2
     while cur1 != cur2:
-        cur1 = headB if cur1 is None else cur1.next
-        cur2 = headA if cur2 is None else cur2.next
+        cur1 = head2 if cur1 is None else cur1.next
+        cur2 = head1 if cur2 is None else cur2.next
     return cur1

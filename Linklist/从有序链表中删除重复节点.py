@@ -12,6 +12,7 @@
     若值相同，直接返回temp;
     若值不同，则把temp接在第一个节点后面，返回第一个节点
 """
+from Linklist.utils import build_l, print_l
 
 
 def delete_duplicates(head):
@@ -25,7 +26,5 @@ def delete_duplicates(head):
 
 
 if __name__ == '__main__':
-    from Linklist.utils import build_l, print_l
-
     head1 = build_l([1, 1, 1, 2, 2, 3, 10, 12])
     print_l(delete_duplicates(head1))

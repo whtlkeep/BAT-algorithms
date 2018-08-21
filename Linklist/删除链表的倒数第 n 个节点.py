@@ -11,6 +11,8 @@
     第二种：使用快慢指针遍历，让快指针先走k步，然后快慢指针一起移动，当快指针遍历到末尾，慢指针正好在倒数第k个节点上，删除即可
 """
 
+from Linklist.utils import build_l, print_l
+
 
 def remove_k_th_from_end(head, k):
     fast = head
@@ -28,7 +30,5 @@ def remove_k_th_from_end(head, k):
 
 
 if __name__ == '__main__':
-    from Linklist.utils import build_l, print_l
-
     head1 = build_l([1, 2, 3, 4, 5])
     print_l(remove_k_th_from_end(head1, 2))

@@ -6,11 +6,7 @@
     给定 1->2->3->4, 你应该返回 2->1->4->3.
 """
 
-
-class ListNode(object):
-    def __init__(self, val):
-        self.val = val
-        self.next = None
+from Linklist.utils import build_l, print_l, ListNode
 
 
 def swap_pairs(head):
@@ -29,7 +25,5 @@ def swap_pairs(head):
 
 
 if __name__ == '__main__':
-    from Linklist.utils import build_l, print_l
-
-    head1 = build_l([1, 2, 3, 4])
+    head1 = build_l([1, 2, 3, 4, 5])
     print_l(swap_pairs(head1))

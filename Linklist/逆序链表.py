@@ -37,5 +37,5 @@ def reverse_list(head):
 
 
 if __name__ == '__main__':
-    head = build_l([1, 2, 3, 4])
-    print_l(reverse_list(head))
+    head1 = build_l([1, 2, 3, 4])
+    print_l(reverse_list(head1))
