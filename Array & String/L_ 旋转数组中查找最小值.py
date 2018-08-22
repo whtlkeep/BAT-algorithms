@@ -31,5 +31,5 @@ def find_min(nums):
 
 
 if __name__ == '__main__':
-    array = [4, 5, 6, 7, 0, 1, 2]
+    array = [4, 5, 6, 7, 0, 1, 2, 3]
     print(find_min(array))
