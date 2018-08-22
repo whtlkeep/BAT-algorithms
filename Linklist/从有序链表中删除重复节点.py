@@ -12,7 +12,7 @@
     若值相同，直接返回temp;
     若值不同，则把temp接在第一个节点后面，返回第一个节点
 """
-from Linklist.utils import build_l, print_l
+from Linklist.utils import *
 
 
 def delete_duplicates(head):

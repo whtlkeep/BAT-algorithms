@@ -20,8 +20,7 @@
     下面的循环的结构是任何加法运算（二进制、字符串、链表）的通用结构，值得仔细品味
 """
 
-
-from Linklist.utils import build_l, print_l, ListNode
+from Linklist.utils import *
 
 
 def add(head1, head2):
@@ -45,8 +44,6 @@ def add(head1, head2):
 
 
 if __name__ == '__main__':
-    # 创建一个单链表l1    4 -> 9 -> 0 -> 4 -> 7 -> 1
     l1 = build_l([9, 9, 9])
-    # 创建一个单链表l2    1 -> 7 -> 1 -> 5 -> 5 -> 4 -> 2 -> 8
     l2 = build_l([1])
-    print_l(head=add(l1, l2), pType="SINGLE")
+    print_l(head=add(l1, l2), p_type="SINGLE")

@@ -6,7 +6,7 @@
     给定 1->2->3->4, 你应该返回 2->1->4->3.
 """
 
-from Linklist.utils import build_l, print_l, ListNode
+from Linklist.utils import *
 
 
 def swap_pairs(head):

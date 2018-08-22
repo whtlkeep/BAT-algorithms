@@ -35,6 +35,4 @@ def add_binary(str_a, str_b):
 
 
 if __name__ == '__main__':
-    str_a = "11111"
-    str_b = "100000"
-    print(add_binary(str_a, str_b))
+    print(add_binary("11111", "100000"))

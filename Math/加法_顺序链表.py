@@ -19,7 +19,7 @@
     下面的循环的结构是任何加法运算（二进制、字符串、链表）的通用结构，值得仔细品味
 """
 
-from Linklist.utils import build_l, print_l, ListNode
+from Linklist.utils import *
 
 
 def reverse_list(head):
@@ -36,7 +36,6 @@ def add(head1, head2):
     # 先将链表逆序
     head1 = reverse_list(head1)
     head2 = reverse_list(head2)
-
     # 以下操作同逆序链表相加
     cur1 = head1
     cur2 = head2
@@ -49,7 +48,6 @@ def add(head1, head2):
         if cur2 is not None:
             carry += cur2.val
             cur2 = cur2.next
-
         # 将求和结果利用“头插法”，得到顺序链表
         cur = ListNode(carry % 10)
         cur.next = new_head.next

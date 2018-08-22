@@ -31,6 +31,7 @@ def combine(all_nums):
 
 if __name__ == '__main__':
     all_nums = [['1', '2'], ['a', 'b', 'c'], ['A', "B", "C"]]
-    result = combine(all_nums)
+    result1 = combine(all_nums)
     from pprint import pprint
-    pprint(result)
+
+    pprint(result1)

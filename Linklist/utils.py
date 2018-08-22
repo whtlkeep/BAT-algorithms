@@ -18,25 +18,26 @@ def build_l(nums):
     return head
 
 
-def print_l(head, pType="STR"):
+def print_l(head, p_type="STR"):
     p = head
     result = []
     while p:
-        if pType in ["STR", "SINGLE"]:
+        if p_type in ["STR", "SINGLE"]:
             result.append(str(p.val))
         else:
             result.append(p.val)
         p = p.next
-    if pType == "STR":
+    if p_type == "STR":
         print(" ".join(result))
-    elif pType == "LIST":
+    elif p_type == "LIST":
         print(result)
-    elif pType == "SINGLE":
+    elif p_type == "SINGLE":
         print(" -> ".join(result))
     else:
         print("error dType!!!")
 
-# if __name__ == '__main__':
-#     alist = [1,2,3,4,5,8,1,2]
-#     head = build_single_list(alist)
-#     print_single_list(head, "SINGLE")
+
+if __name__ == '__main__':
+    nums1 = [1, 2, 3, 4, 5, 8, 1, 2]
+    head1 = build_l(nums1)
+    print_l(head1, "SINGLE")
