@@ -90,4 +90,4 @@ def permutation(nums):
 # ---------------------- important --------------------------
 
 array = list("1234")
-Permutation(array)
+permutation(array)

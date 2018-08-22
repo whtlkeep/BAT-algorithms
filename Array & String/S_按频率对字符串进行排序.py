@@ -33,10 +33,6 @@
 
 
 def frequency_sort(string):
-    """
-    :type string: str
-    :rtype: str
-    """
     times = dict()
     for c in string:
         times[c] = 1 if c not in times else times[c] + 1
@@ -48,5 +44,5 @@ def frequency_sort(string):
 
 
 if __name__ == '__main__':
-    string = "apple"
-    print(frequency_sort(string))
+    string1 = "apple"
+    print(frequency_sort(string1))

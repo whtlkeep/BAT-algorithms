@@ -11,7 +11,7 @@
 
 三、步骤：
 计算中间位置 mid = (start + end) >> 1
-    1、显然，Array[start...mid] 和 Array[mid+1....end]必有一个是循环升序数组，有一个是普通升序数组；
+    1、显然，Array[start...mid] 和 Array[mid+1....end]必有一个是循环升序数组，有一个是普通升序数组；而最小元素一定在循环升序数组中
     2、若，Array[mid] > Array[end],说明子数组Array[mid+1,mid+2,...,end]是循环升序，更新 start = mid + 1
     3、若，Array[mid]<Array[end], 说明子数组Array[mid+1,mid+2,...,end]是普通升序， 更新 end = mid
 """

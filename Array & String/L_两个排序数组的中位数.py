@@ -10,14 +10,14 @@ def find_median_sorted_arrays(nums1, nums2):
     size = len(nums1) + len(nums2)
     mid = size >> 1
     if size % 2 == 1:
-        return find_Kth(nums1, nums2, mid + 1)
+        return find_k_th(nums1, nums2, mid + 1)
     else:
-        smaller = find_Kth(nums1, nums2, mid)
-        bigger = find_Kth(nums1, nums2, mid + 1)
+        smaller = find_k_th(nums1, nums2, mid)
+        bigger = find_k_th(nums1, nums2, mid + 1)
         return (smaller + bigger) / 2.0
 
 
-def find_Kth(nums1, nums2, k):
+def find_k_th(nums1, nums2, k):
     if len(nums1) == 0:
         return nums2[k - 1]
     if len(nums2) == 0:
@@ -28,10 +28,10 @@ def find_Kth(nums1, nums2, k):
     a = nums1[mid - 1] if len(nums1) >= mid else None
     b = nums2[mid - 1] if len(nums2) >= mid else None
     if b is None or (a is not None and a < b):
-        return find_Kth(nums1[mid:], nums2, k - mid)
-    return find_Kth(nums1, nums2[mid:], k - mid)
+        return find_k_th(nums1[mid:], nums2, k - mid)
+    return find_k_th(nums1, nums2[mid:], k - mid)
 
 
 if __name__ == '__main__':
     print(find_median_sorted_arrays([1, 2, 3, 10], [4, 5, 6, 7]))
-    print(find_Kth([1, 2, 3, 10], [4, 5, 6, 7], 8))
+    print(find_k_th([1, 2, 3, 10], [4, 5, 6, 7], 8))
