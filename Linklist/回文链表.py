@@ -57,4 +57,11 @@ def is_equal(head1, head2):
 
 
 if __name__ == '__main__':
-    print(is_palindrome(build_l([1, 2, 3, 2, 1])))
+    print("----------test 1-------------")
+    l1 = build_l([1, 2, 3, 2, 1])
+    print_l(l1, p_type="SINGLE")
+    print(is_palindrome(l1))
+    print("----------test 2-------------")
+    l2 = build_l([1, 2, 3])
+    print_l(l2, p_type="SINGLE")
+    print(is_palindrome(l2))
