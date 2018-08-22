@@ -17,15 +17,18 @@
 from Linklist.utils import *
 
 
-# def reverseList(head):
-#     if head == None or head.next == None:
-#         return head
-#     right = head.next
-#     newhead = reverseList(right)
-#     right.next = head
-#     head.next = None
-#     return newhead
+# 递归实现
+def reverse_list(head):
+    if head is None or head.next is None:
+        return head
+    right = head.next
+    new_head = reverse_list(right)
+    right.next = head
+    head.next = None
+    return new_head
 
+
+# 头插法逆序
 def reverse_list(head):
     new_head = ListNode(-1)  # 头结点
     while head:
