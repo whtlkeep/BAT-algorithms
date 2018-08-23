@@ -40,6 +40,6 @@ def hollandr(nums):
 
 
 if __name__ == '__main__':
-    array = [1, 2, 0, 0, 0, 1, 0, 2, 0, 1, 0, 1, 1, 1, 1, 0, 1]
-    hollandr(array)
-    print(array)
+    nums = [1, 2, 0, 0, 0, 1, 0, 2, 0, 1, 0, 1, 1, 1, 1, 0, 1]
+    hollandr(nums)
+    print(nums)
