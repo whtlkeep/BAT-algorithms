@@ -19,6 +19,7 @@ def compute_temporary_array(pattern):
 
 def kmp(text, pattern):
     lsp = compute_temporary_array(pattern)
+    print(lsp)
     i, j = 0, 0
     size_t = len(text)
     size_p = len(pattern)
