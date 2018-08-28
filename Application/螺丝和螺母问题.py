@@ -16,40 +16,42 @@
 
 
 def fix(nut, bolt, left, right):
-    if left < right:
-        temp = nut[left]
-        i = left
-        j = right
-        while i < j:
-            while i < j and bolt[i] < temp:
-                i += 1
-            while i < j and bolt[j] > temp:
-                j -= 1
-            if i < j:
-                bolt[i], bolt[j] = bolt[j], bolt[i]
-        bolt[i] = temp
-        bolt[left], bolt[i] = bolt[i], bolt[left]
+    if left >= right:
+        return
 
-        temp = bolt[left + 1]
-        i = left + 1
-        j = right
+    temp = nut[left]
+    i = left
+    j = right
+    while i < j:
+        while i < j and bolt[i] < temp:
+            i += 1
+        while i < j and bolt[j] > temp:
+            j -= 1
+        if i < j:
+            bolt[i], bolt[j] = bolt[j], bolt[i]
+    bolt[i] = temp
+    bolt[left], bolt[i] = bolt[i], bolt[left]
 
-        while i < j:
-            while i < j and nut[i] < temp:
-                i += 1
-            while i < j and nut[j] > temp:
-                j -= 1
-            if i < j:
-                nut[i], nut[j] = nut[j], nut[i]
-        nut[i] = temp
-        nut[left + 1], nut[i] = nut[i], nut[left + 1]
+    temp = bolt[left + 1]
+    i = left + 1
+    j = right
+    while i < j:
+        while i < j and nut[i] < temp:
+            i += 1
+        while i < j and nut[j] > temp:
+            j -= 1
+        if i < j:
+            nut[i], nut[j] = nut[j], nut[i]
+    nut[i] = temp
+    nut[left + 1], nut[i] = nut[i], nut[left + 1]
 
-        fix(nut, bolt, left + 2, i)
-        fix(nut, bolt, i + 1, right)
+    fix(nut, bolt, left + 2, i)
+    fix(nut, bolt, i + 1, right)
+
 
 if __name__ == '__main__':
-    nut = [5, 9, 3, 7, 1, 8, 2, 4, 6]
-    bolt = [7, 4, 1, 2, 5, 6, 9, 8, 3]
-    fix(nut,bolt,0,len(nut)-1)
-    print(nut)
-    print(bolt)
+    nut1 = [4, 9, 5, 1, 7, 8, 2, 3, 6]
+    bolt1 = [7, 4, 1, 2, 5, 6, 9, 8, 3]
+    fix(nut1, bolt1, 0, len(nut1) - 1)
+    print(nut1)
+    print(bolt1)
