@@ -1,4 +1,5 @@
-对《[编程之美](http://vdisk.weibo.com/s/dCbnAFkZVs1uo%20%20)》一书中的问题，贡献出自己的Python代码
+对《[编程之美](http://vdisk.weibo.com/s/dCbnAFkZVs1uo%20%20)》一书中的问题，贡献出Python代码  
+本书的编程问题都很有意思，直接去解答，难度不小。转化思路，柳暗花明，对逻辑思维的训练大有裨益！  
 
 ## 书本目录：
 - 第1章 游戏之乐——游戏中碰到的题目  
