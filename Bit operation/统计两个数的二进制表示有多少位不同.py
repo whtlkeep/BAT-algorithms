@@ -19,7 +19,7 @@
 """
 
 
-def hammingDistance(x, y):
+def hamming_distance(x, y):
     z = x ^ y
     count = 0
     # 接下来统计二进制数z中1的个数
@@ -31,4 +31,4 @@ def hammingDistance(x, y):
 
 
 if __name__ == '__main__':
-    print(hammingDistance(1, 4))
+    print(hamming_distance(1, 4))
