@@ -2,7 +2,7 @@
 本书的编程问题都很有意思，直接去解答，难度不小。转化思路，柳暗花明，对逻辑思维的训练大有裨益！  
 
 ## 书本目录：
-- 第1章 游戏之乐——游戏中碰到的题目  
+- 第1章 [游戏之乐——游戏中碰到的题目](https://github.com/whtlkeep/BAT-algorithms/tree/master/The%20beauty%20of%20programming/chapter-1)    
   - 1 让CPU占用率曲线听你指挥  
   - 2 中国象棋将帅问题  
   - 3 一摞烙饼的排序   
@@ -21,7 +21,7 @@
   - 16 24点游戏  
   - 17 俄罗斯方块游戏  
   - 18 挖雷游戏  
-- 第2章 数字之魅——数字中的技巧  
+- 第2章 [数字之魅——数字中的技巧](https://github.com/whtlkeep/BAT-algorithms/tree/master/The%20beauty%20of%20programming/chapter-2)    
   - 1 求二进制数中1的个数  
   - 2 不要被阶乘吓倒  
   - 3 寻找发帖“水王”  
@@ -43,7 +43,7 @@
   - 19 区间重合判断  
   - 20 程序理解和时间分析  
   - 21 只考加法的面试题  
-- 第3章 结构之法——字符串及链表的探索 
+- 第3章 [结构之法——字符串及链表的探索](https://github.com/whtlkeep/BAT-algorithms/tree/master/The%20beauty%20of%20programming/chapter-4)   
   - 1 字符串移位包含的问题  
   - 2 电话号码对应英语单词  
   - 3 计算字符串的相似度  
@@ -55,7 +55,7 @@
   - 9 重建二叉树  
   - 10 分层遍历二叉树  
   - 11 程序改错  
-- 第4章 数学之趣——数学游戏的乐趣  
+- 第4章 [数学之趣——数学游戏的乐趣](https://github.com/whtlkeep/BAT-algorithms/tree/master/The%20beauty%20of%20programming/chapter-4)    
   - 1 金刚坐飞机问题  
   - 2 瓷砖覆盖地板  
   - 3 买票找零  
