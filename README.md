@@ -21,6 +21,7 @@
 * [链表](https://github.com/whtlkeep/BAT-algorithms/tree/master/Linklist)  
 * [数学](https://github.com/whtlkeep/BAT-algorithms/tree/master/Math)  
 * [位运算](https://github.com/whtlkeep/BAT-algorithms/tree/master/Bit%20operation)  
+* [编程之美]（https://github.com/whtlkeep/BAT-algorithms/tree/master/The%20beauty%20of%20programming）
 
 
 数据结构资源链接：https://pan.baidu.com/s/1PNOUUGm4sYCRmasttrm8SA 密码：f8l7
