@@ -19,11 +19,13 @@ def compute_temporary_array(pattern):
 
 def kmp(text, pattern):
     lsp = compute_temporary_array(pattern)
-    print(lsp)
     i, j = 0, 0
     size_t = len(text)
     size_p = len(pattern)
+    count = 0
     while i < size_t and j < size_p:
+        count += 1
+        print(count)
         if text[i] == pattern[j]:
             i += 1
             j += 1
@@ -39,7 +41,7 @@ def kmp(text, pattern):
 
 
 if __name__ == '__main__':
-    src = 'abcxabcdabcdabcy'
-    sub_string = 'cdabcdabc'
+    src = 'ababcabcabd'
+    sub_string = 'abcabd'
     result = kmp(src, sub_string)
     print(result)

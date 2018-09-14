@@ -32,11 +32,12 @@ def selection_sort2(nums):
         for j in range(i):
             if nums[j] > nums[max_index]:
                 max_index = j
+
         if max_index != i:
             nums[i], nums[max_index] = nums[max_index], nums[i]
 
 
 if __name__ == '__main__':
-    nums = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    nums = list(range(31,0,-1))
     selection_sort2(nums)
     print(nums)

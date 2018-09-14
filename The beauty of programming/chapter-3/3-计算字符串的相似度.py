@@ -19,6 +19,9 @@ def calculate_string_distance(str_a, start_a, end_a, str_b, start_b, end_b):
 
 
 if __name__ == '__main__':
-    str_a = "aa"
+    str_a = "aaee"
     str_b = "aac"
-    print(calculate_string_distance(str_a, 0, len(str_a) - 1, str_b, 0, len(str_b) - 1))
+    if calculate_string_distance(str_a, 0, len(str_a) - 1, str_b, 0, len(str_b) - 1) == 1:
+        print(1)
+    else:
+        print(0)
